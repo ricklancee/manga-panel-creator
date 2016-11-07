@@ -2,7 +2,7 @@
 
 *Currently a work in progress.*
 
-[https://ricklancee.github.io/manga-reader-creator](https://ricklancee.github.io/manga-reader-creator)
+[https://ricklancee.github.io/manga-panel-creator](https://ricklancee.github.io/manga-panel-creator)
 
 #### Issues:  
 
