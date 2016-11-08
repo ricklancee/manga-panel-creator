@@ -48,6 +48,8 @@ class Panels {
       this.currentPathString = '';
       this.currentlyDrawing = false;
 
+      this.filesLoaded = false;
+
       this.shiftModifier = false;
       this.zoom = 1;
       this.noPanelText = 'No panels drawn.';
@@ -229,6 +231,10 @@ class Panels {
     }
 
     _onPageClick(event) {
+      if (!this.filesLoaded) {
+        return;
+      }
+
       if (this.currentlyDrawing && this.shiftModifier) {
         const reversed = this.currentPathString.split("").reverse().join("");
         this.currentPathString = reversed.replace(/^(.*?L)/, '').split("").reverse().join("");
@@ -461,6 +467,7 @@ class Panels {
       this._fillResultsContainer(this.loadedImages);
       // load first image
       this._setImage(0);
+      this.filesLoaded = true;
     }
 
     _sortImage(images) {
